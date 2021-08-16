@@ -42,13 +42,13 @@ router.post('/', (req, res) => {
   if (name === 'parse') {
     res.json({
       response_type: 'in channel',
-      text: resultArabigo(param).length > 1 ? resultArabigo(param) : 'Error',
+      text: resultArabigo(param),
     });
   }
   if (name === 'stringify') {
     res.json({
       response_type: 'in channel',
-      text: resultRoman(+param).length > 1 ? resultArabigo(param) : 'Error',
+      text: resultRoman(+param),
     });
   }
 
