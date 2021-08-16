@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose --coverage"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,9 @@
   "homepage": "https://github.com/Milumon/REG003-roman-numerals-slack#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "roman-numerals-dm": "^1.0.2"
+    "jest": "^27.0.6",
+    "roman-numerals-dm": "^1.0.2",
+    "supertest": "^6.1.5"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

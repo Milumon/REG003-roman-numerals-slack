@@ -13,6 +13,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(require('./routes/routes'));
 // el escuchador
 // consolear el puerto en el cual se está escuchando
-app.listen(app.get('port'), () => {
+const server = app.listen(app.get('port'), () => {
   console.info(`Tamo escuchando el puerto ${app.get('port')}`);
 });
+
+// exportamos el server para poder manipularlo en los test y poder detener el servidor
+
+module.exports = {
+  app,
+  server,
+};
